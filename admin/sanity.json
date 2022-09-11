@@ -11,9 +11,7 @@
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool",
-    "vercel-deploy",
-    "@sanity/dashboard"
+    "@sanity/desk-tool"
   ],
   "env": {
     "development": {
@@ -26,10 +24,6 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
-    },
-    {
-      "implements": "part:@sanity/base/root",
-      "path": "plugins/sanity-plugin-tutorial/CustomDefaultLayout"
     }
   ]
 }

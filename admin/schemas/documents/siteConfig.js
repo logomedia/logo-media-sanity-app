@@ -28,12 +28,12 @@ export default {
     {
       title: 'Site language',
       description:
-        'Should be a valid bcp47 language code like en, en-US, no or nb-NO',
+        'Should be a valid  language code like en, en-US, no or nb-NO',
       name: 'lang',
       type: 'string',
       validation: Rule =>
         Rule.custom(lang =>
-          bcp47.parse(lang) ? true : 'Please use a valid bcp47 code'
+          bcp47.parse(lang) ? true : 'Please use a valid  code'
         ),
     },
     {
