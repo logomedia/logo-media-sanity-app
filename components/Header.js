@@ -7,8 +7,8 @@ import styles from './Header.module.css'
 import HamburgerIcon from './icons/Hamburger'
 import { getPathFromSlug, slugParamToPath } from '../utils/urls'
 import { useState } from 'react'
-import styled from 'styled-components'
 import CloseIcon from './icons/Close'
+import Image from 'next/image'
 /*
 class Header extends Component {
   state = {showNav: false}
@@ -130,7 +130,7 @@ function Header(props) {
         return <SVG src={logo.asset.url} className={styles.logo} />
       }
   
-      return <img src={logo.asset.url} alt={logo.title} className={styles.logo} />
+      return <Image src={logo.asset.url} alt={logo.title} className={styles.logo} />
     }
     useEffect(() => {
       router.events.on('routeChangeComplete', hideMenu)
