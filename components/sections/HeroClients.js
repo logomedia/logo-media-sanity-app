@@ -8,19 +8,19 @@ import Cta from '../Cta'
 import Image from 'next/image'
 import Marquee from "react-fast-marquee";
 
+
+
+
+
 function urlFor(source) {
   return imageUrlBuilder(client).image(source)
 }
-async function getClients() {
-  let data
-  data = await client.fetch(groq`*[_type == "client"]`)
-  return data
-}
+
 
 function HeroClients(props) {
-  const { heading, backgroundImage, backgroundImageAltText, heroImage, heroImageAltText, tagline, ctas } = props
-  const clients = getClients()
-  console.log(clients)
+  const { heading, backgroundImage, backgroundImageAltText, heroImage, heroImageAltText, tagline, ctas, clients } = props
+  
+  
   let heroImgDimensions = urlFor(heroImage).url().split(/[-./]+/)[8].split('x')
   let heroWidth = heroImgDimensions[0];
   let heroHeight = heroImgDimensions[1];
@@ -29,9 +29,13 @@ function HeroClients(props) {
   let backgroundWidth = backgroundImgDimensions[0];
   let backgroundHeight = backgroundImgDimensions[1];
 
+  //let clientImg = urlFor(client.logo).url().split(/[-./]+/)[8].split('x')
+  
+  
   
   return (
     <div className={styles.root}>
+      <div className={styles.contentContainer}>
       <div className={styles.content}>
         <h1 className={styles.title}>{heading}</h1>
         <div className={styles.tagline}>{tagline && <SimpleBlockContent blocks={tagline} />}</div>
@@ -48,8 +52,26 @@ function HeroClients(props) {
           <Image  priority layout="responsive" width={heroWidth} height={heroHeight} src={urlFor(heroImage).auto('format').url()} alt={heroImageAltText} />
         </div>        
 
-      </div>
-      
+        </div>
+        </div>
+      <div className={styles.clients} id="Clients">
+                <h2 > Trusted by</h2>
+        {clients &&
+          
+          (
+                    <div className={styles.clientsContainer}>
+                        <Marquee gradientWidth ="0" gradient="false" pauseOnHover="true" speed="50">
+                            {clients.map(c => (
+                                <a className={styles.clientLink} href={c.url} key={c._id} target="_blank" rel="noreferrer">
+                                    <div className={styles.imgContainer}>
+                                        <Image className={styles.clientImg} src={urlFor(c.logo).height(35).auto('format').url()} alt={c.name} layout='fill' objectFit="contain" objectPosition="center"/>
+                                    </div>
+                                </a>
+                            ))}                      
+                        </Marquee>                        
+                    </div>                    
+                )}
+            </div>
       <Image className={styles.heroBackground} priority layout="fill" objectFit="cover" objectPosition="center" src={urlFor(backgroundImage).width(2000).auto('format').url()} alt={backgroundImageAltText}  />
 
     </div>
@@ -66,4 +88,8 @@ HeroClients.propTypes = {
   ctas: PropTypes.arrayOf(PropTypes.object),
 }
 
+
+
+
 export default HeroClients
+

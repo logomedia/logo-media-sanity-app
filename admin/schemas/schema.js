@@ -25,7 +25,7 @@ import simplePortableText from './objects/simplePortableText';
 
 // Landing page sections
 import hero from './objects/hero';
-import heroclients from './objects/heroclients';
+import heroClients from './objects/heroClients';
 import imageSection from './objects/imageSection';
 import textSection from './objects/textSection';
 
@@ -40,7 +40,7 @@ export default createSchema({
     embedHTML,
     figure,
     hero,
-    heroclients,
+    heroClients,
     imageSection,
     internalLink,
     link,

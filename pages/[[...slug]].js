@@ -7,7 +7,8 @@ import React from 'react'
 import client from '../client'
 import Layout from '../components/Layout'
 import RenderSections from '../components/RenderSections'
-import {getSlugVariations, slugParamToPath} from '../utils/urls'
+import { getSlugVariations, slugParamToPath } from '../utils/urls'
+import { getClients } from '../lib/clients'
 
 const pageFragment = groq`
 ...,
@@ -68,7 +69,9 @@ export const getServerSideProps = async ({params}) => {
       notFound: true,
     }
   }
-
+  const clients = await getClients()
+  data.clients = clients
+  console.log(data.clients)
   return {
     props: data || {},
   }
@@ -85,6 +88,7 @@ const LandingPage = (props) => {
     content = [],
     config = {},
     slug,
+    clients
   } = props
 
   const openGraphImages = openGraphImage
@@ -124,7 +128,7 @@ const LandingPage = (props) => {
         }}
         noindex={disallowRobots}
       />
-      {content && <RenderSections sections={content} />}
+      {content && <RenderSections sections={content} clients={clients} />}
     </Layout>
   )
 }

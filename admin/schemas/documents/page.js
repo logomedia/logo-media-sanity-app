@@ -23,7 +23,7 @@ export default {
       title: 'Page sections',
       of: [
         { type: 'hero' },
-        { type: 'heroclients' },
+        { type: 'heroClients' },
         { type: 'imageSection' },
         { type: 'textSection' },
       ],

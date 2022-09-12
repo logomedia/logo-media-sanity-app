@@ -6,8 +6,7 @@
   background-color: var(--color-black, #000);
   color: var(--color-white, #fff);
   padding: 7rem 4rem;
-  display:flex;
-  align-items: center;
+  
 
   @media (--media-max-tablet) {
     
@@ -47,6 +46,10 @@
     padding:1rem;
   }
   
+}
+.contentContainer{
+  display:flex;
+  align-items: center;
 }
 
 .title {
@@ -129,4 +132,11 @@
   @media (--media-max-mobile){
     max-width:calc(100% / 2)!important;
   }
+}
+.clients{
+    position:relative;
+    z-index:2;
+    padding:60px 0 0;
+    width:100%;
+    
 }

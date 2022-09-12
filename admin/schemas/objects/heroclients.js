@@ -1,6 +1,6 @@
 export default {
   type: 'object',
-  name: 'heroclients',
+  name: 'heroClients',
   title: 'HeroClients',
   fields: [
     {
