@@ -1,0 +1,11 @@
+
+@custom-media --media-max-mobile (max-width: 777px);
+@custom-media --media-min-mobile (min-width: 375px);
+
+@custom-media --media-max-tablet (max-width: 1024px);
+@custom-media --media-min-tablet (min-width: 778px);
+
+@custom-media --media-max-desktop (max-width: 1440px);
+@custom-media --media-min-desktop (min-width: 1025px);
+
+

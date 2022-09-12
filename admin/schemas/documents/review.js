@@ -1,10 +1,10 @@
-import { MasterDetailIcon } from '@sanity/icons'
+import { StarIcon } from '@sanity/icons'
 
 export default {
-  name: 'page',
+  name: 'review',
   type: 'document',
-  title: 'Page',
-  icon: MasterDetailIcon,
+  title: 'Reviews',
+  icon: StarIcon,
   fieldsets: [
     {
       title: 'SEO & metadata',
@@ -23,7 +23,6 @@ export default {
       title: 'Page sections',
       of: [
         { type: 'hero' },
-        { type: 'heroclients' },
         { type: 'imageSection' },
         { type: 'textSection' },
       ],

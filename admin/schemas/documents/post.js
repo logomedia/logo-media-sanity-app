@@ -1,10 +1,10 @@
-import { MasterDetailIcon } from '@sanity/icons'
+import { DocumentTextIcon } from '@sanity/icons'
 
 export default {
-  name: 'page',
+  name: 'post',
   type: 'document',
-  title: 'Page',
-  icon: MasterDetailIcon,
+  title: 'Posts',
+  icon: DocumentTextIcon,
   fieldsets: [
     {
       title: 'SEO & metadata',
@@ -23,7 +23,6 @@ export default {
       title: 'Page sections',
       of: [
         { type: 'hero' },
-        { type: 'heroclients' },
         { type: 'imageSection' },
         { type: 'textSection' },
       ],

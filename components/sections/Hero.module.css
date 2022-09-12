@@ -1,0 +1,132 @@
+@import "../../styles/custom-media.css";
+
+.root {
+  composes: center from "../../styles/shared.module.css";
+  position: relative;
+  background-color: var(--color-black, #000);
+  color: var(--color-white, #fff);
+  padding: 7rem 4rem;
+  display:flex;
+  align-items: center;
+
+  @media (--media-max-tablet) {
+    
+    padding: 4rem 1rem;
+  }
+  @media (--media-max-mobile) {
+    padding: 1rem 0;
+    flex-direction:column-reverse;
+  }
+}
+
+.root::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  background-image: linear-gradient(var(--white), var(--orange));
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity:0.5;
+}
+
+.content {
+  width: 100%;
+  max-width: var(--width-large);
+  padding: 2rem;
+  box-sizing: border-box;
+  z-index: 3;
+  @media (--media-max-desktop) {
+    padding: 0 4rem;
+  }
+  @media (--media-max-tablet) {
+    padding: 0 2rem;
+  }
+  @media (--media-max-mobile) {
+    padding:1rem;
+  }
+  
+}
+
+.title {
+  position: relative;
+  font-weight: 600;
+  font-size: var(--font-title1-size);
+  line-height: var(--font-title1-line-height);
+  text-shadow: 2px 2px 4px var(--black);
+  margin: 0;
+  padding: 0;
+  width:100%;
+  
+
+  @media (--media-max-desktop) {
+    font-size: var(--font-title3-size);
+    line-height: var(--font-title3-line-height);
+
+  }
+  @media (--media-max-tablet) {
+    font-size: var(--font-title4-size);
+    line-height: var(--font-title4-line-height);
+
+  }
+  @media (--media-max-mobile) {
+    font-size: var(--font-title5-size);
+    line-height: var(--font-title5-line-height);
+
+  }
+  
+}
+
+.tagline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5em;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px var(--black);
+  font-size: var(--font-title7-size);
+  line-height: var(--font-title7-line-height);
+
+  @media (--media-max-mobile) {
+    font-size: var(--font-large-size);
+    line-height: var(--font-large-size-line-height);
+
+  }
+}
+
+.tagline > p {
+  margin: 0;
+}
+
+.ctas {
+  margin-top: 3rem;
+  display: flex;
+}
+
+.ctas > *:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.root p a {
+  color: inherit;
+}
+.imageContainer{
+  position: relative;
+  width:50%;
+  z-index:2;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  @media (--media-max-mobile){
+    margin-bottom:var(--font-base-size);
+  }
+}
+.heroImage{
+  display:block;
+  width:100%;
+  height:100%;
+  @media (--media-max-mobile){
+    max-width:calc(100% / 2)!important;
+  }
+}

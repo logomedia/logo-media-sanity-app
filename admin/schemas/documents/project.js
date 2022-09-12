@@ -1,10 +1,10 @@
-import { MasterDetailIcon } from '@sanity/icons'
+import { EarthGlobeIcon } from '@sanity/icons'
 
 export default {
-  name: 'page',
+  name: 'project',
   type: 'document',
-  title: 'Page',
-  icon: MasterDetailIcon,
+  title: 'Project',
+  icon: EarthGlobeIcon,
   fieldsets: [
     {
       title: 'SEO & metadata',
@@ -18,12 +18,16 @@ export default {
       title: 'Title',
     },
     {
+      name: 'slug',
+      type: 'slug',
+      title: 'Slug',
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Page sections',
       of: [
         { type: 'hero' },
-        { type: 'heroclients' },
         { type: 'imageSection' },
         { type: 'textSection' },
       ],

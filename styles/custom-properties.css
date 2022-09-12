@@ -1,0 +1,54 @@
+:root {
+  --wide-container: 60rem;
+  --narrow-container: 40rem;
+
+  --font-family-sans: 'Futura';
+
+  --color-black: #000;
+  --color-dark-gray: #32373e;
+  --color-gray: #697a90;
+  --color-light-gray: #b4bcc7;
+  --color-very-light-gray: #333;
+  --color-white: #fff;
+  --color-accent: #f88d1b;
+  --purple: #540e6f;
+  --orange: #f88d1b;
+  --grey: #e3e3e3;
+  --black: #000;
+  --white: #fff;
+  --HeadingFonts: "Futura Heavy";
+  --BodyFonts:"Futura Medium";
+
+  /* Typography */
+  --unit: 16;
+  --font-micro-size: calc(10 / var(--unit) * 1rem); /* 10px */
+  --font-micro-line-height: calc(12 / 10); /* 12px */
+  --font-small-size: calc(14 / var(--unit) * 1rem); /* 14px */
+  --font-small-line-height: calc(21 / 14); /* 21px */
+  --font-base-size: 1em; /* 16px */
+  --font-base-line-height: calc(24 / var(--unit)); /* 24px */
+  --font-large-size: calc(18 / var(--unit) * 1rem); /* 18px */
+  --font-large-line-height: calc(24 / 18); /* 27px */
+
+  --font-title7-size: calc(24 / var(--unit) * 1rem); 
+  --font-title7-line-height: 24px; 
+  --font-title6-size: calc(30 / var(--unit) * 1rem); 
+  --font-title6-line-height: 30px; 
+  --font-title5-size: calc(36 / var(--unit) * 1rem); 
+  --font-title5-line-height: 36px; 
+  --font-title4-size: calc(48 / var(--unit) * 1rem); 
+  --font-title4-line-height: 48px;
+  --font-title3-size: calc(60 / var(--unit) * 1rem); 
+  --font-title3-line-height: 60px; 
+  --font-title2-size: calc(72 / var(--unit) * 1rem); 
+  --font-title2-line-height: 72px; 
+  --font-title1-size: calc(84 / var(--unit) * 1rem); 
+  --font-title1-line-height: 84px; 
+
+  /* Widths */
+  --width-x-small: 20em;
+  --width-small: 40em;
+  --width-medium: 60em;
+  --width-large: 80em;
+  --width-x-large: 100em;
+}

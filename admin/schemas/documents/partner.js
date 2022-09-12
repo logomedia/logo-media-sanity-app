@@ -1,9 +1,9 @@
 import { MasterDetailIcon } from '@sanity/icons'
 
 export default {
-  name: 'page',
+  name: 'partner',
   type: 'document',
-  title: 'Page',
+  title: 'Partners',
   icon: MasterDetailIcon,
   fieldsets: [
     {
@@ -23,7 +23,6 @@ export default {
       title: 'Page sections',
       of: [
         { type: 'hero' },
-        { type: 'heroclients' },
         { type: 'imageSection' },
         { type: 'textSection' },
       ],
